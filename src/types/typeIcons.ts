@@ -6,7 +6,7 @@ export type typeIcons =
   | 'shopping-cart-fill'
   | 'timer-fill'
   | 'box'
-  | 'coffe-fill'
+  | 'coffee-fill'
   | 'plus'
   | 'minus'
   | 'credit-card-line'

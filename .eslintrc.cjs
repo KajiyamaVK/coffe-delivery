@@ -8,7 +8,7 @@ module.exports = {
     {
       files: ['*.ts', '*.tsx'],
       rules: {
-        'no-restricted-imports': 'off',
+        'import/no-absolute-path': 'off',
       },
     },
   ],

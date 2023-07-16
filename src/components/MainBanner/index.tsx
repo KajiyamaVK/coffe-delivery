@@ -1,4 +1,5 @@
 import {
+  Background,
   ImageContainer,
   Main,
   Subtitle,
@@ -7,16 +8,17 @@ import {
   TopicItem,
   TopicsContainer,
 } from './styles'
-import coffeBanner from '../../../public/images/coffe_banner.png'
+import coffeBanner from '/src/assets/images/coffe_banner.png'
 import Circle from '../Circle'
 
 export default function MainBanner() {
   return (
     <Main>
+      <Background />
       <TextContainer>
         <Title>Encontre o café perfeito para qualquer hora do dia</Title>
         <Subtitle>
-          Com o Coffe Delivery você recebe seu café onde estiver, a qualquer
+          Com o coffee Delivery você recebe seu café onde estiver, a qualquer
           hora
         </Subtitle>
         <TopicsContainer>
@@ -64,7 +66,7 @@ export default function MainBanner() {
                 <Circle
                   size="medium"
                   color="purple"
-                  iconName="coffe-fill"
+                  iconName="coffee-fill"
                   iconColor="white"
                   iconSize="1rem"
                 />
@@ -74,7 +76,7 @@ export default function MainBanner() {
           </div>
         </TopicsContainer>
       </TextContainer>
-      <ImageContainer src={coffeBanner} alt="Coffe Banner" />
+      <ImageContainer src={coffeBanner} alt="coffee Banner" />
     </Main>
   )
 }

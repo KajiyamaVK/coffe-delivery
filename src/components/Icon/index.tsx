@@ -4,7 +4,7 @@ import {
   MapPin,
   Trash,
   CurrencyDollar,
-  ShoppingCart,
+  ShoppingCartSimple,
   Timer,
   Package,
   Coffee,
@@ -57,7 +57,7 @@ export default function Icon({ name, size, color }: IIcon) {
     case 'shopping-cart-fill':
       icon = (
         <Main color={color}>
-          <ShoppingCart size={size} weight="fill" />
+          <ShoppingCartSimple size={size} weight="fill" />
         </Main>
       )
       break
@@ -75,7 +75,7 @@ export default function Icon({ name, size, color }: IIcon) {
         </Main>
       )
       break
-    case 'coffe-fill':
+    case 'coffee-fill':
       icon = (
         <Main color={color}>
           <Coffee size={size} weight="fill" />

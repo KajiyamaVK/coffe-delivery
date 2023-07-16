@@ -1,13 +1,24 @@
 import { styled } from 'styled-components'
-import backgroundImg from '../../../public/images/banner-background.png'
+import backgroundImg from '/src/assets/images/banner-background.png'
 
 export const Main = styled.div`
+  position: relative;
   display: flex;
   width: 100%;
   padding: 5.75rem 10rem;
   gap: 3.5rem;
   justify-content: center;
+`
+
+export const Background = styled.div`
   background-image: url(${backgroundImg});
+  filter: blur(8px);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-position: center;
 `
 
 export const ImageContainer = styled.img`
