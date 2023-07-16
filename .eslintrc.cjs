@@ -4,10 +4,16 @@ module.exports = {
     es2021: true,
   },
   extends: '@rocketseat/eslint-config/react',
-  overrides: [],
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'no-restricted-imports': 'off',
+      },
+    },
+  ],
   parserOptions: {
     ecmaVersion: 'latest',
   },
   plugins: ['react'],
-  rules: {},
 }

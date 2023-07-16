@@ -16,8 +16,11 @@ const GlobalStyle = createGlobalStyle`
     body , input , button , textarea, span{
         font-family: ${(props) => props.theme['text-font']};
         font-weight: 400;
-        font-size: 1rem;
-        
+        font-size: 1rem;   
+    }
+
+    h1,h2,h3{
+        font-family: ${(props) => props.theme['title-font']};
     }
 
     button{

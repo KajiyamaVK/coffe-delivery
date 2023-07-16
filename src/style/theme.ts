@@ -1,3 +1,5 @@
+import 'styled-components'
+
 export const theme = {
   colors: {
     products: {
@@ -7,6 +9,7 @@ export const theme = {
       'purple-dark': '#4B2995',
       purple: '#8047F8',
       'purple-light': '#EBE5F9',
+      white: '#FFFFFF',
     },
     base: {
       'base-title': '#272221',
@@ -23,4 +26,10 @@ export const theme = {
   },
   'title-font': '"Baloo 2", cursive',
   'text-font': '"Roboto", sans-serif',
+}
+
+type Theme = typeof theme
+declare module 'styled-components' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface DefaultTheme extends Theme {}
 }

@@ -10,6 +10,7 @@ export const Main = styled.div`
 export const Logo = styled.img`
   width: 5.3125rem;
   height: 2.5rem;
+  object-fit: contain;
 `
 
 export const TagsContainer = styled.div`
