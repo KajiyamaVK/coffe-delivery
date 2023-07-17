@@ -1,10 +1,11 @@
-import { typeIcons } from "./typeIcons"
-import { enumSize } from "./enumSizes"
+import { typeIcons } from './typeIcons'
+import { enumSize } from './enumSizes'
 
-export interface ICircles{ 
-  size: string,
+export interface ICircles {
+  size: string
   color: string
-  iconName?: typeIcons,
-  iconSize?: string,
-  iconColor: string
+  iconName?: typeIcons
+  iconSize?: string
+  iconColor?: string
+  text?: string
 }

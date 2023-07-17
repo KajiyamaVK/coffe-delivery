@@ -1,4 +1,4 @@
-import MainBanner from '../../components/MainBanner'
+import MainBanner from './Components/MainBanner'
 import CoffeCardsList from '../../components/CoffeCardsList'
 
 export default function Home() {

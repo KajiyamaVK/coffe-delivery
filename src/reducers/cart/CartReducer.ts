@@ -8,9 +8,12 @@ export default function CartReducer(
 ): ICartReducerState {
   switch (action.type) {
     case ActionsTypes.ADD_TO_CART: {
+      const newCart = state.cart.filter(
+        (item) => item.id !== action.payload.item?.id,
+      )
       const newItem = action.payload.item
       if (newItem) {
-        return { cart: [...state.cart, newItem] }
+        return { cart: [...newCart, newItem] }
       }
       return { cart: [...state.cart] }
     }
@@ -21,10 +24,5 @@ export default function CartReducer(
         return { cart }
       }
       return { cart: [...state.cart] }
-
-    case ActionsTypes.GET_CART:
-      return { ...state }
-    default:
-      return { ...state }
   }
 }

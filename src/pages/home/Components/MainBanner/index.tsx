@@ -9,17 +9,17 @@ import {
   TopicsContainer,
 } from './styles'
 import coffeBanner from '/src/assets/images/coffe_banner.png'
-import Circle from '../Circle'
+import Circle from '../../../../components/Circle'
 
 export default function MainBanner() {
   return (
     <Main>
       <Background />
       <TextContainer>
-        <Title>Encontre o café perfeito para qualquer hora do dia</Title>
+        <Title>Find the perfect coffe for any moment of you day</Title>
         <Subtitle>
-          Com o coffee Delivery você recebe seu café onde estiver, a qualquer
-          hora
+          With <b>Coffee Delivery</b> you receive your coffee wherever you are,
+          at anytime.
         </Subtitle>
         <TopicsContainer>
           <div>
@@ -33,7 +33,7 @@ export default function MainBanner() {
                   iconSize="1rem"
                 />
               </div>
-              <p>Compra simples e segura</p>
+              <p>Simple and secured purchase</p>
             </TopicItem>
             <TopicItem>
               <div>
@@ -45,7 +45,7 @@ export default function MainBanner() {
                   iconSize="1rem"
                 />
               </div>
-              <p>Compra simples e segura</p>
+              <p>Fast and trackable delivery</p>
             </TopicItem>
           </div>
           <div>
@@ -59,7 +59,7 @@ export default function MainBanner() {
                   iconSize="1rem"
                 />
               </div>
-              <p>Compra simples e segura</p>
+              <p>Packaging keeps the coffee intact</p>
             </TopicItem>
             <TopicItem>
               <div>
@@ -71,7 +71,7 @@ export default function MainBanner() {
                   iconSize="1rem"
                 />
               </div>
-              <p>Compra simples e segura</p>
+              <p>Your coffee arrives fresh and hot</p>
             </TopicItem>
           </div>
         </TopicsContainer>

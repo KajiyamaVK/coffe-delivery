@@ -16,3 +16,9 @@ export const Logo = styled.img`
 export const TagsContainer = styled.div`
   display: flex;
 `
+
+export const Counter = styled.div`
+  position: relative;
+  right: 10px;
+  bottom: 7px;
+`

@@ -2,8 +2,7 @@ import { styled } from 'styled-components'
 
 export const Main = styled.div`
   margin: 2.5rem 10rem;
-
-  padding: 2.5rem;
+  background-color: aqua;
 `
 
 export const Form = styled.form`
@@ -33,5 +32,3 @@ export const SubTitle = styled.p`
   margin-top: 0;
   font-size: 0.875rem;
 `
-
-export const FieldsContainer = styled.div``

@@ -1,4 +1,4 @@
-import { ICoffeeDetails } from '../../types/ICoffeeDetails.ts'
+import { ICoffeeDetails } from '../../../../types/ICoffeeDetails.ts'
 import QuantitySelector from '../QuantitySelector/index.tsx'
 import {
   AttributesContainer,
@@ -37,7 +37,7 @@ export default function CoffeeCard({
       <CoffeeDescription>{description}</CoffeeDescription>
       <Footer>
         <CoffeePrice>{price.toFixed(2)}</CoffeePrice>
-        <QuantitySelector />
+        <QuantitySelector id={id} />
       </Footer>
     </Main>
   )

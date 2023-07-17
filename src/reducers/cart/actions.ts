@@ -8,7 +8,3 @@ export function addToCartAction(item: ICartItem) {
 export function removeItemAction(id: number) {
   return { type: ActionsTypes.REMOVE_ITEM, payload: { id } }
 }
-
-export function getCartAction() {
-  return { type: ActionsTypes.GET_CART, payload: {} }
-}
