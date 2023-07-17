@@ -1,14 +1,23 @@
 import { styled } from 'styled-components'
 
+interface ISection {
+  width?: string
+  maxWidth?: string
+}
+
 export const Main = styled.div`
   margin: 2.5rem 10rem;
-
   padding: 2.5rem;
+  display: flex;
+  column-gap: 2rem;
+  justify-content: center;
 `
 
-export const Form = styled.form`
+export const ContentContainer = styled.div`
   padding: 2.5rem;
   background-color: ${({ theme }) => theme.colors.base['base-card']};
+  display: flex;
+  column-gap: 2rem;
 `
 
 export const IconContainer = styled.div`
@@ -20,6 +29,12 @@ export const IconContainer = styled.div`
   justify-content: center;
   height: 25px;
   margin-top: 0.1rem;
+`
+
+export const Section = styled.div<ISection>`
+  gap: 1rem;
+  width: ${({ width }) => width};
+  max-width: ${({ maxWidth }) => maxWidth};
 `
 
 export const TitleContainer = styled.div`
@@ -34,4 +49,7 @@ export const SubTitle = styled.p`
   font-size: 0.875rem;
 `
 
-export const FieldsContainer = styled.div``
+export const CartItemsContainer = styled.div`
+  background-color: ${({ theme }) => theme.colors.base['base-card']};
+  width: 28rem;
+`

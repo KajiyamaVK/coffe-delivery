@@ -1,5 +1,5 @@
 import CoffeCard from '../CoffeCard'
-import { mockdata } from '../../assets/mockData'
+import { mockdata } from '../../../../../src/assets/mockData'
 import { CardsContainer, Main } from './styles'
 
 export default function CoffeCardsList() {
