@@ -2,19 +2,26 @@ import ICartReducerState from '../../types/ICartReducerState'
 import { ActionsTypes } from '../../types/typesActions'
 import { IAction } from './interfaces'
 
-export default function CartReducer(state: ICartReducerState, action: IAction) {
+export default function CartReducer(
+  state: ICartReducerState,
+  action: IAction,
+): ICartReducerState {
   switch (action.type) {
     case ActionsTypes.ADD_TO_CART: {
       const newItem = action.payload.item
-      return action.payload.item && { cart: [...state.cart, newItem] }
+      if (newItem) {
+        return { cart: [...state.cart, newItem] }
+      }
+      return { cart: [...state.cart] }
     }
 
     case ActionsTypes.REMOVE_ITEM:
-      return (
-        action.payload.id && {
-          cart: state.cart.filter((item) => item.id !== action.payload.id),
-        }
-      )
+      if (action.payload.id) {
+        const cart = state.cart.filter((item) => item.id !== action.payload.id)
+        return { cart }
+      }
+      return { cart: [...state.cart] }
+
     case ActionsTypes.GET_CART:
       return { ...state }
     default:
