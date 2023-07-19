@@ -1,6 +1,6 @@
-import { useState, useContext } from 'react'
-import { CartContext } from '../../../../contexts/cartContext'
-import Icon from '../../../../components/Icon'
+import { useState, useContext, useEffect } from 'react'
+import { CartContext } from '../../contexts/cartContext'
+import Icon from '../Icon'
 import {
   Input,
   InputContainer,
@@ -8,13 +8,33 @@ import {
   QuantityButton,
   AddItemButton,
 } from './styles'
-import { ICartItem } from '../../../../types/ICartItem'
+import { ICartItem } from '../../types/ICartItem'
 
-export default function QuantitySelector({ id }: { id: number }) {
+interface IQuantitySelector {
+  id: number
+}
+
+export default function QuantitySelector({ id }: IQuantitySelector) {
   const [quantity, setQuantity] = useState(0)
   const { addToCart, cart } = useContext(CartContext)
   const newItem: ICartItem = { id, quantity }
 
+  retrieveQuantityInformation()
+
+  function retrieveQuantityInformation() {
+    if (quantity === 0) {
+      const currentItem = cart.find((item) => {
+        return item.id === id
+      })
+      let currentQuantity
+      if (typeof currentItem !== 'undefined') {
+        currentQuantity = currentItem?.quantity
+      }
+      currentQuantity && setQuantity(currentQuantity)
+    }
+  }
+
+  console.log(cart)
   function handleAddToCart() {
     addToCart(newItem)
     alert('Item added to cart!')
@@ -24,7 +44,6 @@ export default function QuantitySelector({ id }: { id: number }) {
   function handleQuantityChange(action: ActionType) {
     if (action === 'add') {
       setQuantity(quantity + 1)
-      console.log(cart)
     } else if (action === 'remove') {
       quantity > 0 && setQuantity(quantity - 1)
     }

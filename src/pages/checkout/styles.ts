@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 interface ISection {
   width?: string
-  maxWidth?: string
+  maxwidth?: string
 }
 
 export const Main = styled.div`
@@ -10,6 +10,7 @@ export const Main = styled.div`
   padding: 2.5rem;
   display: flex;
   column-gap: 2rem;
+  row-gap: 10.75rem;
   justify-content: center;
 `
 
@@ -32,10 +33,14 @@ export const IconContainer = styled.div`
 `
 
 export const Section = styled.div<ISection>`
-  gap: 1rem;
   width: ${({ width }) => width};
-  max-width: ${({ maxWidth }) => maxWidth};
+  max-width: ${({ maxwidth }) => maxwidth};
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
 `
+
+/// /////////////////Address Box/////////////////////
 
 export const TitleContainer = styled.div`
   display: flex;
@@ -53,3 +58,7 @@ export const CartItemsContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.base['base-card']};
   width: 28rem;
 `
+
+/// /////////////////Payment Methods Box/////////////////////
+
+/// /////////////////Cart Items and Total/////////////////////

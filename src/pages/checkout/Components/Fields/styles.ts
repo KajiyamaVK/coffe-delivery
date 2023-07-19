@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 interface IInput {
   width?: string
-  maxWidth?: string
+  maxwidth?: string
   minWidth?: string
 }
 
@@ -22,7 +22,7 @@ export const Input = styled.input<IInput>`
   padding: 0.75rem;
   border-radius: 8px;
   width: ${({ width }) => width};
-  max-width: ${({ maxWidth }) => maxWidth};
+  max-width: ${({ maxwidth }) => maxwidth};
   min-width: ${({ minWidth }) => minWidth};
   &::placeholder {
     color: ${({ theme }) => theme.colors.base['base-label']};

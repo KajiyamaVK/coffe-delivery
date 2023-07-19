@@ -1,5 +1,5 @@
 import { ICoffeeDetails } from '../../../../types/ICoffeeDetails.ts'
-import QuantitySelector from '../QuantitySelector/index.tsx'
+import QuantitySelector from '../../../../components/QuantitySelector/index.tsx'
 import {
   AttributesContainer,
   CoffeeAttributes,
@@ -10,6 +10,7 @@ import {
   Footer,
   Main,
 } from './styles.ts'
+import { getimgUrl } from '../../../../functions'
 
 export default function CoffeeCard({
   id,
@@ -19,13 +20,13 @@ export default function CoffeeCard({
   price,
   attributes,
 }: ICoffeeDetails) {
-  function imgUrl(img: string) {
+  function getImgUrl(img: string) {
     return `src/assets/images/coffees/${img}.png`
   }
 
   return (
     <Main>
-      <CoffeeImg src={imgUrl(img)} />
+      <CoffeeImg src={getImgUrl(img)} />
       <AttributesContainer>
         {attributes.map((attribute, index) => (
           <CoffeeAttributes key={`${id.toFixed(2)}${index.toFixed(2)}`}>

@@ -1,11 +1,11 @@
 import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
-import CartButton from '../CartButton'
 import CurrentLocationTag from '../CurrentLocationTag'
 import { Main, Logo, TagsContainer, Counter } from './styles'
 import logo from '/src/assets/images/Logo.svg'
 import Circle from '../Circle'
 import { CartContext } from '../../contexts/cartContext'
+import Button from '../Button'
 
 export default function Header() {
   const { cart } = useContext(CartContext)
@@ -22,7 +22,7 @@ export default function Header() {
       </NavLink>
       <TagsContainer>
         <CurrentLocationTag cityName="Porto Alegre" />
-        <CartButton />
+        <Button role="GoToCheckout" />
         {itemsInCartQuantity !== '0' && (
           <Counter>
             <Circle

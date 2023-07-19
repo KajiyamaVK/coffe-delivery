@@ -3,7 +3,7 @@ import { Input, Division, Form } from './styles'
 export default function Fields() {
   return (
     <Form>
-      <Input placeholder="CEP" width="12.5rem" />
+      <Input placeholder="Postal Code" width="12.5rem" />
       <Input placeholder="Street address" width="100%" />
       <Division>
         <Input placeholder="Number" width="16rem" />

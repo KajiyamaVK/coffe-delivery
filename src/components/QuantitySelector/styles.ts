@@ -3,6 +3,7 @@ import { styled } from 'styled-components'
 export const Main = styled.div`
   display: flex;
   column-gap: 0.5rem;
+  height: 2.375rem;
 `
 
 export const Input = styled.input`
@@ -13,6 +14,7 @@ export const Input = styled.input`
   border: none;
   background: transparent;
   line-height: 1.3;
+  text-align: center;
 `
 
 export const QuantityButton = styled.button`
@@ -26,11 +28,17 @@ export const InputContainer = styled.div`
   gap: 0.25rem;
   padding: 0.5rem;
   border-radius: 8px;
+  height: 2.375rem;
   background: ${({ theme }) => theme.colors.base['base-button']};
+  align-items: center;
+  justify-content: center;
 `
 
 export const AddItemButton = styled.button`
   background: ${({ theme }) => theme.colors.products['purple-dark']};
   padding: 0.5rem;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `

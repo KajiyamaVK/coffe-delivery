@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 interface MainProps {
   color?: string
-  topSpacing?: string
+  topspacing?: string
 }
 
 export const Main = styled.div<MainProps>`
@@ -12,5 +12,5 @@ export const Main = styled.div<MainProps>`
     ]};
   padding-top: 0.2rem;
   position: relative;
-  top: ${(props) => props.topSpacing || '0'};
+  top: ${(props) => props.topspacing || '0'};
 `
