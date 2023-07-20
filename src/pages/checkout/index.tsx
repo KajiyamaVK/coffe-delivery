@@ -1,4 +1,4 @@
-import { CartItemsContainer, ContentContainer, Main, Section } from './styles'
+import { Main } from './styles'
 import AddressAndPaymentMethod from './Components/AddressAndPaymentMethod'
 import CartContainer from './Components/CartContainer'
 

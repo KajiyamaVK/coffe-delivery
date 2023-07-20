@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { Main, PaymentButton } from './styles'
+import { CheckoutButton, Main, PaymentButton } from './styles'
 import { ShoppingCart } from '@phosphor-icons/react'
 
 import Icon from '../Icon'
@@ -12,13 +12,20 @@ type ButtonType =
   | 'PaymentMethod-CreditCard'
   | 'PaymentMethod-DebitCard'
   | 'PaymentMethod-Money'
+  | 'checkout'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   role: ButtonType
   className?: string
+  disabled?: boolean
 }
 
-export default function Button({ role, className, onClick }: ButtonProps) {
+export default function Button({
+  role,
+  className,
+  onClick,
+  disabled,
+}: ButtonProps) {
   const formattedType = role.split('-')
   if (formattedType[0] === 'GoToCheckout') {
     return (
@@ -59,6 +66,12 @@ export default function Button({ role, className, onClick }: ButtonProps) {
           </PaymentButton>
         )}
       </>
+    )
+  } else if (formattedType[0] === 'checkout') {
+    return (
+      <CheckoutButton onClick={onClick} disabled={disabled}>
+        Confirm Purchase
+      </CheckoutButton>
     )
   }
 }

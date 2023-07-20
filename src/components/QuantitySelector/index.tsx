@@ -19,6 +19,8 @@ export default function QuantitySelector({ id }: IQuantitySelector) {
   const { addToCart, cart } = useContext(CartContext)
   const newItem: ICartItem = { id, quantity }
 
+  const isCartButtonDisabled = quantity === 0
+
   retrieveQuantityInformation()
 
   function retrieveQuantityInformation() {
@@ -34,7 +36,6 @@ export default function QuantitySelector({ id }: IQuantitySelector) {
     }
   }
 
-  console.log(cart)
   function handleAddToCart() {
     addToCart(newItem)
     alert('Item added to cart!')
@@ -80,7 +81,7 @@ export default function QuantitySelector({ id }: IQuantitySelector) {
         </InputContainer>
       </div>
 
-      <AddItemButton onClick={handleAddToCart}>
+      <AddItemButton onClick={handleAddToCart} disabled={isCartButtonDisabled}>
         <Icon color="white" name="shopping-cart-fill" size="22" />
       </AddItemButton>
     </Main>

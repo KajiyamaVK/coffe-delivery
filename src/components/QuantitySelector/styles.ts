@@ -41,4 +41,8 @@ export const AddItemButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  &&:disabled {
+    cursor: not-allowed;
+    background-color: ${({ theme }) => theme.colors.base['base-button']};
+  }
 `

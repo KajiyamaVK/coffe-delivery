@@ -1,7 +1,11 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { createContext, ReactNode, useReducer } from 'react'
 import { ICartItem } from '../types/ICartItem'
-import { addToCartAction, removeItemAction } from '../reducers/cart/actions'
+import {
+  addToCartAction,
+  removeItemAction,
+  resetAppAction,
+} from '../reducers/cart/actions'
 import CartReducer from '../reducers/cart/CartReducer'
 import ICartReducerState from '../types/ICartReducerState'
 
@@ -9,6 +13,7 @@ interface ICartContext {
   cart: ICartItem[]
   addToCart: ({ id, quantity }: ICartItem) => ICartReducerState
   removeItem: (id: number) => ICartReducerState
+  resetApp: () => ICartReducerState
 }
 
 export const CartContext = createContext({} as ICartContext)
@@ -31,8 +36,13 @@ export function CartContextProvider({ children }: { children: ReactNode }) {
     return { cart }
   }
 
+  function resetApp() {
+    dispatch(resetAppAction())
+    return { cart }
+  }
+
   return (
-    <CartContext.Provider value={{ addToCart, removeItem, cart }}>
+    <CartContext.Provider value={{ addToCart, removeItem, cart, resetApp }}>
       {children}
     </CartContext.Provider>
   )

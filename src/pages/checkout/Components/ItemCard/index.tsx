@@ -19,7 +19,6 @@ export default function ItemCard() {
 
   return cart.map((item, index) => {
     const coffee = mockdata.find((data) => {
-      console.log('index', typeof index)
       return data.id === item.id
     })
 

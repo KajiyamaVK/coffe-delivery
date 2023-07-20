@@ -1,3 +1,4 @@
+import { ICartItem } from '../../types/ICartItem'
 import ICartReducerState from '../../types/ICartReducerState'
 import { ActionsTypes } from '../../types/typesActions'
 import { IAction } from './interfaces'
@@ -24,5 +25,12 @@ export default function CartReducer(
         return { cart }
       }
       return { cart: [...state.cart] }
+
+    case ActionsTypes.RESET_APP: {
+      const cart: ICartItem[] = []
+      console.log('🚀 ~ file: CartReducer.ts:32 ~ cart:', cart)
+      alert('Purchase succesfull.')
+      return { cart }
+    }
   }
 }

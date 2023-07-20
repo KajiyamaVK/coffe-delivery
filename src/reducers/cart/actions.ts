@@ -8,3 +8,11 @@ export function addToCartAction(item: ICartItem) {
 export function removeItemAction(id: number) {
   return { type: ActionsTypes.REMOVE_ITEM, payload: { id } }
 }
+
+export function resetAppAction() {
+  console.log(
+    '🚀 ~ file: actions.ts:13 ~ resetAppAction ~ resetAppAction:',
+    resetAppAction,
+  )
+  return { type: ActionsTypes.RESET_APP, payload: {} }
+}

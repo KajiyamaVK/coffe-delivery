@@ -38,6 +38,7 @@ export const Section = styled.div<ISection>`
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+  overflow: hidden;
 `
 
 /// /////////////////Address Box/////////////////////

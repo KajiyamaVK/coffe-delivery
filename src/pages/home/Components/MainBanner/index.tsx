@@ -30,7 +30,7 @@ export default function MainBanner() {
                   color="yellow-dark"
                   iconName="shopping-cart-fill"
                   iconColor="white"
-                  iconSize="1rem"
+                  iconSize="16px"
                 />
               </div>
               <p>Simple and secured purchase</p>
@@ -42,7 +42,7 @@ export default function MainBanner() {
                   color="yellow"
                   iconName="timer-fill"
                   iconColor="white"
-                  iconSize="1rem"
+                  iconSize="16px"
                 />
               </div>
               <p>Fast and trackable delivery</p>
@@ -56,7 +56,7 @@ export default function MainBanner() {
                   color="yellow-dark"
                   iconName="package-fill"
                   iconColor="white"
-                  iconSize="1rem"
+                  iconSize="16px"
                 />
               </div>
               <p>Packaging keeps the coffee intact</p>
@@ -68,7 +68,7 @@ export default function MainBanner() {
                   color="purple"
                   iconName="coffee-fill"
                   iconColor="white"
-                  iconSize="1rem"
+                  iconSize="16px"
                 />
               </div>
               <p>Your coffee arrives fresh and hot</p>

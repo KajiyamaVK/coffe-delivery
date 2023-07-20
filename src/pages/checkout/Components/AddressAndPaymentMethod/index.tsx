@@ -12,10 +12,8 @@ import {
 } from './styles'
 
 function handleClick(e: React.MouseEvent<HTMLButtonElement>) {
-  console.log(
-    '🚀 ~ file: index.tsx:15 ~ handleClick ~ handleClick:',
-    e.currentTarget,
-  )
+  const activatedButton = document.querySelector('button.active')
+  activatedButton?.classList.remove('active')
   e.currentTarget.classList.add('active')
 }
 
