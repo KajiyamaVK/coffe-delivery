@@ -20,7 +20,7 @@ export default function CoffeeCard({
   attributes,
 }: ICoffeeDetails) {
   function getImgUrl(img: string) {
-    const path = process.env.PROD_URL ?? '/public/images/coffees/'
+    const path = process.env.PROD_URL ?? '/images/coffees/'
     console.log('prod_url', process.env.PROD_URL)
     return `${path}${img}.png`
   }
