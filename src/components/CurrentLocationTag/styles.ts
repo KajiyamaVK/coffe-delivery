@@ -17,6 +17,6 @@ export const LocationIcon = styled.div`
 
 export const CityName = styled.span`
   font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.products['purple-text']};
+  color: ${(props) => props.theme.colors.products.purple};
   line-height: 1.3;
 `

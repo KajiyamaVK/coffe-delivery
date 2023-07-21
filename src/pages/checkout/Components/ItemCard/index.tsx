@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import {
   CoffeePhoto,
-  Container,
   Main,
   PurchasedCoffeeName,
   PurchasedCoffeeValue,
@@ -17,7 +16,7 @@ export default function ItemCard() {
 
   if (cart.length === 0) return <p>No item in the cart yet...</p>
 
-  return cart.map((item, index) => {
+  return cart.map((item) => {
     const coffee = mockdata.find((data) => {
       return data.id === item.id
     })
@@ -43,5 +42,6 @@ export default function ItemCard() {
         </Main>
       )
     }
+    return <></>
   })
 }

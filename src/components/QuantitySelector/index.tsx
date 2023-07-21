@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from 'react'
+import { useState, useContext } from 'react'
 import { CartContext } from '../../contexts/cartContext'
 import Icon from '../Icon'
 import {

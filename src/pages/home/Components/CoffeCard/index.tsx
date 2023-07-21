@@ -10,7 +10,6 @@ import {
   Footer,
   Main,
 } from './styles.ts'
-import { getimgUrl } from '../../../../functions'
 
 export default function CoffeeCard({
   id,
@@ -21,7 +20,7 @@ export default function CoffeeCard({
   attributes,
 }: ICoffeeDetails) {
   function getImgUrl(img: string) {
-    return `src/assets/images/coffees/${img}.png`
+    return `/src/assets/images/coffees/${img}.png`
   }
 
   return (

@@ -1,5 +1,4 @@
 import { typeIcons } from './typeIcons'
-import { enumSize } from './enumSizes'
 
 export interface ICircles {
   size: string
