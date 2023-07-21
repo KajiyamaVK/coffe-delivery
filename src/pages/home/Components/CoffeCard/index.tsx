@@ -20,7 +20,8 @@ export default function CoffeeCard({
   attributes,
 }: ICoffeeDetails) {
   function getImgUrl(img: string) {
-    return `/src/assets/images/coffees/${img}.png`
+    const path = '/src/assets/images/coffees/'
+    return `${path}${img}.png`
   }
 
   return (
