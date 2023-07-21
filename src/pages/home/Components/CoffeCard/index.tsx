@@ -10,6 +10,7 @@ import {
   Footer,
   Main,
 } from './styles.ts'
+import { getimgUrl } from '../../../../functions/index.ts'
 
 export default function CoffeeCard({
   id,
@@ -19,15 +20,9 @@ export default function CoffeeCard({
   price,
   attributes,
 }: ICoffeeDetails) {
-  function getImgUrl(img: string) {
-    const path = process.env.PROD_URL ?? '/images/coffees/'
-    console.log('prod_url', process.env.PROD_URL)
-    return `${path}${img}.png`
-  }
-
   return (
     <Main>
-      <CoffeeImg src={getImgUrl(img)} />
+      <CoffeeImg src={getimgUrl(img)} />
       <AttributesContainer>
         {attributes.map((attribute, index) => (
           <CoffeeAttributes key={`${id.toFixed(2)}${index.toFixed(2)}`}>
