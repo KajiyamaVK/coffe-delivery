@@ -8,7 +8,7 @@ import {
   TopicItem,
   TopicsContainer,
 } from './styles'
-import coffeBanner from '/src/assets/images/coffe_banner.png'
+import coffeBanner from '/public/images/coffe_banner.png'
 import Circle from '../../../../components/Circle'
 
 export default function MainBanner() {

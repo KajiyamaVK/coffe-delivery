@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import backgroundImg from '/src/assets/images/banner-background.png'
+import backgroundImg from '/public/images/banner-background.png'
 
 export const Main = styled.div`
   position: relative;
