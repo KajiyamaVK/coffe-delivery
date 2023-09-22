@@ -7,7 +7,7 @@ export const Main = styled.div`
 `
 
 export const Input = styled.input`
-  width: 1.5rem;
+  width: 1.9rem;
   //removes the button arrows from the input
   -moz-appearance: textfield;
   appearance: textfield;

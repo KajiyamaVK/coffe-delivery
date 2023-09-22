@@ -10,9 +10,5 @@ export function removeItemAction(id: number) {
 }
 
 export function resetAppAction() {
-  console.log(
-    '🚀 ~ file: actions.ts:13 ~ resetAppAction ~ resetAppAction:',
-    resetAppAction,
-  )
   return { type: ActionsTypes.RESET_APP, payload: {} }
 }

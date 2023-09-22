@@ -28,7 +28,6 @@ export default function CartReducer(
 
     case ActionsTypes.RESET_APP: {
       const cart: ICartItem[] = []
-      console.log('🚀 ~ file: CartReducer.ts:32 ~ cart:', cart)
       alert('Purchase succesfull.')
       return { cart }
     }
