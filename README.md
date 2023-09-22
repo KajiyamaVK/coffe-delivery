@@ -12,11 +12,11 @@
 
 Online on: [Vercel](https://coffe-delivery-coral.vercel.app//)*
 
-##About the project
+## About the project
 
 A simple one actually. Only a basic e-commerce prototype so we can start future projects. 
 
-##Techs used
+## Techs used
 
 <div style='display:flex'>
 <img src='https://fullstacker.com.br/imgs/Stacks/react.jpg' width=60>
